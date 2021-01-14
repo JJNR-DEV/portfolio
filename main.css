@@ -15,32 +15,50 @@ body ul {
   padding: 0;
   list-style: none;
 }
+body .media-big-screens {
+  display: flex;
+  max-width: 1270px;
+  margin: 0 auto;
+}
 
-.social-links ul, footer ul, header ul {
+.social-links ul, footer ul, header .media-big-screens ul {
   display: flex;
   flex-direction: row;
   margin: 10px 0;
 }
-.social-links ul a, footer ul a, header ul a {
+.social-links ul a, footer ul a, header .media-big-screens ul a {
   padding: 0 10px;
 }
-.social-links ul a .linkedin-icon, footer ul a .linkedin-icon, header ul a .linkedin-icon {
+.social-links ul a .linkedin-icon, footer ul a .linkedin-icon, header .media-big-screens ul a .linkedin-icon {
   padding: 10px;
 }
-.social-links ul a li, footer ul a li, header ul a li {
+.social-links ul a li, footer ul a li, header .media-big-screens ul a li {
   background-color: #fff;
   border-radius: 100%;
   display: flex;
   transition: background-color 0.5s;
 }
-.social-links ul a li:hover, footer ul a li:hover, header ul a li:hover {
+.social-links ul a li:hover, footer ul a li:hover, header .media-big-screens ul a li:hover {
   background-color: #ffaf29;
+}
+@media (max-width: 380px) {
+  .social-links ul a li img, footer ul a li img, header .media-big-screens ul a li img {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: 380px) {
+  .social-links ul a .linkedin-icon img, footer ul a .linkedin-icon img, header .media-big-screens ul a .linkedin-icon img {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 header {
   padding: 20px 30px;
   background-color: #333746;
-  display: flex;
+}
+header .media-big-screens {
   flex-direction: row;
   justify-content: space-between;
 }
@@ -64,43 +82,39 @@ header {
 }
 
 .second-section {
-  padding: 20px;
   background-color: #242834;
   color: #fff;
-  display: flex;
   padding: 20px 20px 30px 20px;
 }
+.second-section .media-big-screens {
+  flex-direction: row;
+}
 @media (max-width: 768px) {
-  .second-section {
+  .second-section .media-big-screens {
     flex-direction: column;
   }
 }
-.second-section h2 {
+.second-section .media-big-screens h2 {
   text-align: center;
 }
-.second-section .about {
+.second-section .media-big-screens .about {
   padding: 10px 30px 10px 20px;
 }
-@media (max-width: 768px) {
-  .second-section .about {
-    padding: 10px 20px;
-  }
-}
-.second-section .contact {
+.second-section .media-big-screens .contact {
   padding: 10px 20px 10px 30px;
 }
-@media (max-width: 768px) {
-  .second-section .contact {
-    padding: 10px 20px;
-  }
-}
-.second-section .contact span {
+.second-section .media-big-screens .contact span {
   font-weight: bold;
   color: #fff;
   text-decoration: underline;
 }
-.second-section .contact span:hover {
+.second-section .media-big-screens .contact span:hover {
   color: #ffaf29;
+}
+@media (max-width: 768px) {
+  .second-section .media-big-screens .about, .second-section .media-big-screens .contact {
+    padding: 10px 20px;
+  }
 }
 
 .third-section {
@@ -259,25 +273,37 @@ header {
   text-align: center;
 }
 
-.social-links ul, footer ul, header ul {
+.social-links ul, footer ul, header .media-big-screens ul {
   display: flex;
   flex-direction: row;
   margin: 10px 0;
 }
-.social-links ul a, footer ul a, header ul a {
+.social-links ul a, footer ul a, header .media-big-screens ul a {
   padding: 0 10px;
 }
-.social-links ul a .linkedin-icon, footer ul a .linkedin-icon, header ul a .linkedin-icon {
+.social-links ul a .linkedin-icon, footer ul a .linkedin-icon, header .media-big-screens ul a .linkedin-icon {
   padding: 10px;
 }
-.social-links ul a li, footer ul a li, header ul a li {
+.social-links ul a li, footer ul a li, header .media-big-screens ul a li {
   background-color: #fff;
   border-radius: 100%;
   display: flex;
   transition: background-color 0.5s;
 }
-.social-links ul a li:hover, footer ul a li:hover, header ul a li:hover {
+.social-links ul a li:hover, footer ul a li:hover, header .media-big-screens ul a li:hover {
   background-color: #ffaf29;
+}
+@media (max-width: 380px) {
+  .social-links ul a li img, footer ul a li img, header .media-big-screens ul a li img {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: 380px) {
+  .social-links ul a .linkedin-icon img, footer ul a .linkedin-icon img, header .media-big-screens ul a .linkedin-icon img {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 footer {

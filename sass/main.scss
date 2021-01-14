@@ -18,6 +18,12 @@ body {
         padding: 0;
         list-style: none;
     }
+
+    .media-big-screens {
+        display: flex;
+        max-width: 1270px;
+        margin: 0 auto;
+    }
 }
 
 @mixin containerPadding() {
