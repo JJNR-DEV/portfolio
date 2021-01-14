@@ -1,0 +1,293 @@
+/* CSS Reset */
+@font-face {
+  font-family: Charlevoix;
+  src: url(font/CharlevoixPro-Regular.3ff99081.otf);
+}
+body {
+  margin: 0;
+  font-family: Charlevoix;
+}
+body a {
+  text-decoration: none;
+  color: #fff;
+}
+body ul {
+  padding: 0;
+  list-style: none;
+}
+
+.social-links ul, footer ul, header ul {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+.social-links ul a, footer ul a, header ul a {
+  padding: 0 10px;
+}
+.social-links ul a .linkedin-icon, footer ul a .linkedin-icon, header ul a .linkedin-icon {
+  padding: 10px;
+}
+.social-links ul a li, footer ul a li, header ul a li {
+  background-color: #fff;
+  border-radius: 100%;
+  display: flex;
+  transition: background-color 0.5s;
+}
+.social-links ul a li:hover, footer ul a li:hover, header ul a li:hover {
+  background-color: #ffaf29;
+}
+
+header {
+  padding: 20px 30px;
+  background-color: #333746;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.first-section {
+  padding: 20px;
+  background-color: #333746;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 40px;
+}
+.first-section .introduction {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.first-section .picture {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.second-section {
+  padding: 20px;
+  background-color: #242834;
+  color: #fff;
+  display: flex;
+  padding: 20px 20px 30px 20px;
+}
+@media (max-width: 768px) {
+  .second-section {
+    flex-direction: column;
+  }
+}
+.second-section h2 {
+  text-align: center;
+}
+.second-section .about {
+  padding: 10px 30px 10px 20px;
+}
+@media (max-width: 768px) {
+  .second-section .about {
+    padding: 10px 20px;
+  }
+}
+.second-section .contact {
+  padding: 10px 20px 10px 30px;
+}
+@media (max-width: 768px) {
+  .second-section .contact {
+    padding: 10px 20px;
+  }
+}
+.second-section .contact span {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: underline;
+}
+.second-section .contact span:hover {
+  color: #ffaf29;
+}
+
+.third-section {
+  padding: 20px;
+  background-color: #333746;
+  color: #fff;
+  padding: 40px 20px 20px;
+}
+.third-section h1 {
+  text-align: center;
+}
+.third-section .projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.third-section .projects .project-container {
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+  margin: 20px auto;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  background-color: #242834;
+  background-size: cover;
+  background-position: center;
+}
+.third-section .projects .qutine:hover {
+  animation-name: qutineIMG;
+  animation-duration: 0.5s;
+  background: url("./images/qutine.png");
+  background-size: cover;
+  background-position: center;
+}
+@keyframes qutineIMG {
+  from {
+    background-color: #242834;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  to {
+    background: url("./images/qutine.png");
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+  }
+}
+.third-section .projects .popcorn:hover {
+  animation-name: popcornIMG;
+  animation-duration: 0.5s;
+  background: url("./images/popcorn.png");
+  background-size: cover;
+  background-position: center;
+}
+@keyframes popcornIMG {
+  from {
+    background-color: #242834;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  to {
+    background: url("./images/popcorn.png");
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+  }
+}
+.third-section .projects .pokedex:hover {
+  animation-name: pokedexIMG;
+  animation-duration: 0.5s;
+  background: url("./images/pokedex.png");
+  background-size: cover;
+  background-position: center;
+}
+@keyframes pokedexIMG {
+  from {
+    background-color: #242834;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  to {
+    background: url("./images/pokedex.png");
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+  }
+}
+.third-section .projects .nice-2-meetya:hover {
+  animation-name: nice-2-meetyaIMG;
+  animation-duration: 0.5s;
+  background: url("./images/nice-2-meetya.png");
+  background-size: cover;
+  background-position: center;
+}
+@keyframes nice-2-meetyaIMG {
+  from {
+    background-color: #242834;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  to {
+    background: url("./images/nice-2-meetya.png");
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+  }
+}
+.third-section .projects .gallery:hover {
+  animation-name: galleryIMG;
+  animation-duration: 0.5s;
+  background: url("./images/gallery.png");
+  background-size: cover;
+  background-position: center;
+}
+@keyframes galleryIMG {
+  from {
+    background-color: #242834;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  to {
+    background: url("./images/gallery.png");
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+  }
+}
+.third-section .projects .manycars:hover {
+  animation-name: manycarsIMG;
+  animation-duration: 0.5s;
+  background: url("./images/2manycars.png");
+  background-size: cover;
+  background-position: center;
+}
+@keyframes manycarsIMG {
+  from {
+    background-color: #242834;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  to {
+    background: url("./images/2manycars.png");
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+  }
+}
+.third-section .projects .project-text h3 {
+  text-align: center;
+}
+
+.social-links ul, footer ul, header ul {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+.social-links ul a, footer ul a, header ul a {
+  padding: 0 10px;
+}
+.social-links ul a .linkedin-icon, footer ul a .linkedin-icon, header ul a .linkedin-icon {
+  padding: 10px;
+}
+.social-links ul a li, footer ul a li, header ul a li {
+  background-color: #fff;
+  border-radius: 100%;
+  display: flex;
+  transition: background-color 0.5s;
+}
+.social-links ul a li:hover, footer ul a li:hover, header ul a li:hover {
+  background-color: #ffaf29;
+}
+
+footer {
+  background-color: #333746;
+}
+footer ul {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/*# sourceMappingURL=main.css.map */

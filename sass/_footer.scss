@@ -1,0 +1,14 @@
+@import './social-links';
+
+footer {
+    background-color: #333746;
+
+    @extend .social-links;
+
+    ul {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+    }
+}

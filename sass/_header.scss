@@ -1,0 +1,11 @@
+@import './social-links';
+
+header {
+    padding: 20px 30px;
+    background-color: #333746;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+   @extend .social-links;
+}

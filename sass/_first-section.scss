@@ -1,0 +1,20 @@
+.first-section {
+    @include containerPadding;
+
+    background-color: #333746;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 40px;
+
+    .introduction {
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .picture {
+        padding: 20px 0;
+        text-align: center;
+    }
+}

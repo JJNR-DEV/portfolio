@@ -1,0 +1,31 @@
+/* CSS Reset */
+
+@font-face {
+    font-family: Charlevoix;
+    src: url(font/CharlevoixPro-Regular.3ff99081.otf);
+}
+
+body {
+    margin: 0;
+    font-family: Charlevoix;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+}
+
+@mixin containerPadding() {
+    padding: 20px;
+}
+
+@import './header';
+@import './first-section';
+@import './second-section';
+@import './third-section';
+@import './footer';
