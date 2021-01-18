@@ -9,6 +9,10 @@ body {
     margin: 0;
     font-family: Charlevoix;
 
+    p {
+        font-size: 1.2rem;
+    }
+
     a {
         text-decoration: none;
         color: #fff;
@@ -26,8 +30,25 @@ body {
     }
 }
 
+
+/* Backgroung Colours */
+$primaryBackground: #333746; 
+
+/* #242834 */ 
+$darkerBackground: #2d3240;
+
+
+/* Mixins */
 @mixin containerPadding() {
     padding: 20px;
+}
+
+@mixin linksAnimation() {
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #ffaf29;
+    }
 }
 
 @import './header';

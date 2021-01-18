@@ -7,6 +7,9 @@ body {
   margin: 0;
   font-family: Charlevoix;
 }
+body p {
+  font-size: 1.2rem;
+}
 body a {
   text-decoration: none;
   color: #fff;
@@ -21,6 +24,9 @@ body .media-big-screens {
   margin: 0 auto;
 }
 
+/* Backgroung Colours */
+/* #242834 */
+/* Mixins */
 .social-links ul, footer ul, header .media-big-screens ul {
   display: flex;
   flex-direction: row;
@@ -36,7 +42,7 @@ body .media-big-screens {
   background-color: #fff;
   border-radius: 100%;
   display: flex;
-  transition: background-color 0.5s;
+  transition: background-color 0.2s;
 }
 .social-links ul a li:hover, footer ul a li:hover, header .media-big-screens ul a li:hover {
   background-color: #ffaf29;
@@ -64,12 +70,12 @@ header .media-big-screens {
 }
 
 .first-section {
-  padding: 20px;
   background-color: #333746;
   color: #fff;
   display: flex;
   flex-direction: column;
   padding: 20px 20px 40px;
+  line-height: 1.5;
 }
 .first-section .introduction {
   text-align: center;
@@ -82,14 +88,15 @@ header .media-big-screens {
 }
 
 .second-section {
-  background-color: #242834;
+  background-color: #2d3240;
   color: #fff;
   padding: 20px 20px 30px 20px;
+  line-height: 1.5;
 }
 .second-section .media-big-screens {
   flex-direction: row;
 }
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .second-section .media-big-screens {
     flex-direction: column;
   }
@@ -98,15 +105,38 @@ header .media-big-screens {
   text-align: center;
 }
 .second-section .media-big-screens .about {
-  padding: 10px 30px 10px 20px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+@media (max-width: 1068px) {
+  .second-section .media-big-screens .about {
+    max-width: 400px;
+  }
+}
+@media (max-width: 968px) {
+  .second-section .media-big-screens .about {
+    max-width: none;
+  }
 }
 .second-section .media-big-screens .contact {
-  padding: 10px 20px 10px 30px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+@media (max-width: 1068px) {
+  .second-section .media-big-screens .contact {
+    max-width: 400px;
+  }
+}
+@media (max-width: 968px) {
+  .second-section .media-big-screens .contact {
+    max-width: none;
+  }
 }
 .second-section .media-big-screens .contact span {
   font-weight: bold;
   color: #fff;
   text-decoration: underline;
+  transition: color 0.2s;
 }
 .second-section .media-big-screens .contact span:hover {
   color: #ffaf29;
@@ -117,6 +147,27 @@ header .media-big-screens {
   }
 }
 
+/* Hover projects */
+@keyframes hoverBackground {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Leaving hover */
+@keyframes appear {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .third-section {
   padding: 20px;
   background-color: #333746;
@@ -131,146 +182,106 @@ header .media-big-screens {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.third-section .projects .project-container {
+.third-section .projects .project-link {
   width: 300px;
-  padding: 10px;
-  text-align: center;
   margin: 20px auto;
   height: 250px;
   display: flex;
   align-items: center;
-  background-color: #242834;
+  padding: 10px;
+}
+.third-section .projects .project-link .project-text {
+  display: none;
+}
+.third-section .projects .project-link .project-text h3, .third-section .projects .project-link .project-text p {
+  text-align: center;
+}
+.third-section .projects .project-link:hover .project-text {
+  display: block;
+}
+.third-section .projects .qutine {
+  animation-name: appear;
+  animation-duration: 0.5s;
+  background-image: url("./images/qutine.png");
   background-size: cover;
   background-position: center;
 }
 .third-section .projects .qutine:hover {
-  animation-name: qutineIMG;
+  animation-name: hoverBackground;
   animation-duration: 0.5s;
-  background: url("./images/qutine.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/qutine.png");
   background-size: cover;
   background-position: center;
 }
-@keyframes qutineIMG {
-  from {
-    background-color: #242834;
-    opacity: 0;
-    background-size: cover;
-    background-position: center;
-  }
-  to {
-    background: url("./images/qutine.png");
-    opacity: 1;
-    background-size: cover;
-    background-position: center;
-  }
+.third-section .projects .popcorn {
+  animation-name: appear;
+  animation-duration: 0.5s;
+  background-image: url("./images/popcorn.png");
+  background-size: cover;
+  background-position: center;
 }
 .third-section .projects .popcorn:hover {
-  animation-name: popcornIMG;
+  animation-name: hoverBackground;
   animation-duration: 0.5s;
-  background: url("./images/popcorn.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/popcorn.png");
   background-size: cover;
   background-position: center;
 }
-@keyframes popcornIMG {
-  from {
-    background-color: #242834;
-    opacity: 0;
-    background-size: cover;
-    background-position: center;
-  }
-  to {
-    background: url("./images/popcorn.png");
-    opacity: 1;
-    background-size: cover;
-    background-position: center;
-  }
+.third-section .projects .pokedex {
+  animation-name: appear;
+  animation-duration: 0.5s;
+  background-image: url("./images/pokedex.png");
+  background-size: cover;
+  background-position: center;
 }
 .third-section .projects .pokedex:hover {
-  animation-name: pokedexIMG;
+  animation-name: hoverBackground;
   animation-duration: 0.5s;
-  background: url("./images/pokedex.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/pokedex.png");
   background-size: cover;
   background-position: center;
 }
-@keyframes pokedexIMG {
-  from {
-    background-color: #242834;
-    opacity: 0;
-    background-size: cover;
-    background-position: center;
-  }
-  to {
-    background: url("./images/pokedex.png");
-    opacity: 1;
-    background-size: cover;
-    background-position: center;
-  }
+.third-section .projects .nice-2-meetya {
+  animation-name: appear;
+  animation-duration: 0.5s;
+  background-image: url("./images/nice-2-meetya.png");
+  background-size: cover;
+  background-position: center;
 }
 .third-section .projects .nice-2-meetya:hover {
-  animation-name: nice-2-meetyaIMG;
+  animation-name: hoverBackground;
   animation-duration: 0.5s;
-  background: url("./images/nice-2-meetya.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/nice-2-meetya.png");
   background-size: cover;
   background-position: center;
 }
-@keyframes nice-2-meetyaIMG {
-  from {
-    background-color: #242834;
-    opacity: 0;
-    background-size: cover;
-    background-position: center;
-  }
-  to {
-    background: url("./images/nice-2-meetya.png");
-    opacity: 1;
-    background-size: cover;
-    background-position: center;
-  }
+.third-section .projects .gallery {
+  animation-name: appear;
+  animation-duration: 0.5s;
+  background-image: url("./images/gallery.png");
+  background-size: cover;
+  background-position: center;
 }
 .third-section .projects .gallery:hover {
-  animation-name: galleryIMG;
+  animation-name: hoverBackground;
   animation-duration: 0.5s;
-  background: url("./images/gallery.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/gallery.png");
   background-size: cover;
   background-position: center;
 }
-@keyframes galleryIMG {
-  from {
-    background-color: #242834;
-    opacity: 0;
-    background-size: cover;
-    background-position: center;
-  }
-  to {
-    background: url("./images/gallery.png");
-    opacity: 1;
-    background-size: cover;
-    background-position: center;
-  }
+.third-section .projects .manycars {
+  animation-name: appear;
+  animation-duration: 0.5s;
+  background-image: url("./images/2manycars.png");
+  background-size: cover;
+  background-position: center;
 }
 .third-section .projects .manycars:hover {
-  animation-name: manycarsIMG;
+  animation-name: hoverBackground;
   animation-duration: 0.5s;
-  background: url("./images/2manycars.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/2manycars.png");
   background-size: cover;
   background-position: center;
-}
-@keyframes manycarsIMG {
-  from {
-    background-color: #242834;
-    opacity: 0;
-    background-size: cover;
-    background-position: center;
-  }
-  to {
-    background: url("./images/2manycars.png");
-    opacity: 1;
-    background-size: cover;
-    background-position: center;
-  }
-}
-.third-section .projects .project-text h3 {
-  text-align: center;
 }
 
 .social-links ul, footer ul, header .media-big-screens ul {
@@ -288,7 +299,7 @@ header .media-big-screens {
   background-color: #fff;
   border-radius: 100%;
   display: flex;
-  transition: background-color 0.5s;
+  transition: background-color 0.2s;
 }
 .social-links ul a li:hover, footer ul a li:hover, header .media-big-screens ul a li:hover {
   background-color: #ffaf29;

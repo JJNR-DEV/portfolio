@@ -1,22 +1,50 @@
-@mixin backgroundPosition() {
+
+@mixin backgroundPosition($img) {
+    animation-name: appear;
+    animation-duration: 0.5s;
+    background-image: url($img);
     background-size: cover;
     background-position: center;
 }
 
-@mixin hoverBackground($img, $name) {
-    animation-name: $name;
+@mixin hoverBackground($img) {
+    animation-name: hoverBackground;
     animation-duration: 0.5s;
-    background: url($img);
-
-    @include backgroundPosition;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url($img);
+    background-size: cover;
+    background-position: center;
 }
 
+/* Hover projects */
+@keyframes hoverBackground {
+    0% {
+        opacity: 1;
+    }
 
+    25% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Leaving hover */
+@keyframes appear {
+    from {
+        opacity: 0.5;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
 
 .third-section {
     @include containerPadding;
     
-    background-color: #333746;
+    background-color: $primaryBackground;
     color: #fff;
     padding: 40px 20px 20px;
 
@@ -29,156 +57,74 @@
         flex-direction: row;
         flex-wrap: wrap;
 
-        .project-container {
+        .project-link {
             width: 300px;
-            padding: 10px;
-            text-align: center;
             margin: 20px auto;
             height: 250px;
             display: flex;
             align-items: center;
-            background-color: #242834;
+            padding: 10px;
 
-            @include backgroundPosition;
-        }
+            .project-text {
+                display: none;
 
-        .qutine {
-            
+                h3, p {
+                    text-align: center;
+                }
+            }
+
             &:hover {
-                @include hoverBackground('./images/qutine.png', qutineIMG);
-
-                @keyframes qutineIMG {
-                    from {
-                        background-color: #242834;
-                        opacity: 0;
-
-                        @include backgroundPosition;
-                    }
-                
-                    to {
-                        background: url('./images/qutine.png');
-                        opacity: 1;
-
-                        @include backgroundPosition;
-                    }
+                .project-text {
+                    display: block;
                 }
             }
         }
 
-        .popcorn {
+        .qutine {
+            @include backgroundPosition('./images/qutine.png');
+            
             &:hover {
-                @include hoverBackground('./images/popcorn.png', popcornIMG);
+                @include hoverBackground('./images/qutine.png');
+            }
+        }
 
-                @keyframes popcornIMG {
-                    from {
-                        background-color: #242834;
-                        opacity: 0;
+        .popcorn {
+            @include backgroundPosition('./images/popcorn.png');
 
-                        @include backgroundPosition;
-                    }
-                
-                    to {
-                        background: url('./images/popcorn.png');
-                        opacity: 1;
-
-                        @include backgroundPosition;
-                    }
-                } 
+            &:hover {
+                @include hoverBackground('./images/popcorn.png');
             }
         }
 
         .pokedex {
+            @include backgroundPosition('./images/pokedex.png');
+
             &:hover {
-                @include hoverBackground('./images/pokedex.png', pokedexIMG);
-
-                @keyframes pokedexIMG {
-                    from {
-                        background-color: #242834;
-                        opacity: 0;
-
-                        @include backgroundPosition;
-                    }
-                
-                    to {
-                        background: url('./images/pokedex.png');
-                        opacity: 1;
-
-                        @include backgroundPosition;
-                    }
-                } 
+                @include hoverBackground('./images/pokedex.png');
             }
         }
 
         .nice-2-meetya {
+            @include backgroundPosition('./images/nice-2-meetya.png');
+
             &:hover {
-                @include hoverBackground('./images/nice-2-meetya.png', nice-2-meetyaIMG);
-
-                @keyframes nice-2-meetyaIMG {
-                    from {
-                        background-color: #242834;
-                        opacity: 0;
-
-                        @include backgroundPosition;
-                    }
-                
-                    to {
-                        background: url('./images/nice-2-meetya.png');
-                        opacity: 1;
-
-                        @include backgroundPosition;
-                    }
-                } 
+                @include hoverBackground('./images/nice-2-meetya.png');
             }
         }
 
         .gallery {
+            @include backgroundPosition('./images/gallery.png');
+
             &:hover {
-                @include hoverBackground('./images/gallery.png', galleryIMG);
-
-                @keyframes galleryIMG {
-                    from {
-                        background-color: #242834;
-                        opacity: 0;
-
-                        @include backgroundPosition;
-                    }
-                
-                    to {
-                        background: url('./images/gallery.png');
-                        opacity: 1;
-
-                        @include backgroundPosition;
-                    }
-                } 
+                @include hoverBackground('./images/gallery.png');
             }
         }
 
         .manycars {
+            @include backgroundPosition('./images/2manycars.png');
+
             &:hover {
-                @include hoverBackground('./images/2manycars.png', manycarsIMG);
-
-                @keyframes manycarsIMG {
-                    from {
-                        background-color: #242834;
-                        opacity: 0;
-
-                        @include backgroundPosition;
-                    }
-                
-                    to {
-                        background: url('./images/2manycars.png');
-                        opacity: 1;
-
-                        @include backgroundPosition;
-                    }
-                } 
-            }
-        }
-
-        .project-text {
-
-            h3 {
-                text-align: center;
+                @include hoverBackground('./images/2manycars.png');
             }
         }
     }

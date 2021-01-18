@@ -1,12 +1,26 @@
+@mixin infoContainers() {
+    max-width: 460px;
+    margin: 0 auto;
+
+    @media(max-width: 1068px) {
+        max-width: 400px;
+    }
+
+    @media(max-width: 968px) {
+        max-width: none;
+    }
+}
+
 .second-section {
-    background-color: #242834;
+    background-color: $darkerBackground;
     color: #fff;
     padding: 20px 20px 30px 20px;
+    line-height: 1.5;
 
     .media-big-screens {
         flex-direction: row;
 
-        @media (max-width: 768px) {
+        @media (max-width: 968px) {
             flex-direction: column;
         }
 
@@ -15,17 +29,18 @@
         }
     
         .about {
-            padding: 10px 30px 10px 20px;
+            @include infoContainers;
         }
         
         .contact {
-            padding: 10px 20px 10px 30px;
+            @include infoContainers;
 
             span {
                 font-weight: bold;
                 color: #fff;
                 text-decoration: underline;
-    
+                transition: color 0.2s;
+
                 &:hover {
                     color: #ffaf29;
                 }
