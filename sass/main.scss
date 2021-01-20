@@ -1,16 +1,13 @@
 /* CSS Reset */
 
-@font-face {
-    font-family: Charlevoix;
-    src: url(font/CharlevoixPro-Regular.3ff99081.otf);
-}
-
 body {
     margin: 0;
-    font-family: Charlevoix;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.1rem;
 
     p {
         font-size: 1.2rem;
+        font-weight: 500;
     }
 
     a {
@@ -53,6 +50,7 @@ $darkerBackground: #2d3240;
 
 @import './header';
 @import './first-section';
-@import './second-section';
+@import './tools-section';
+@import './info-section';
 @import './third-section';
 @import './footer';

@@ -1,0 +1,47 @@
+.tools-section {
+    background-color: $primaryBackground;
+    color: #fff;
+    display: flex;
+    padding-bottom: 20px;
+    
+    .media-big-screens {
+        flex-direction: column;
+        width: 100%;
+
+        h2 {
+            text-align: center;
+        }
+    
+        .tools-list {
+            display: flex;
+            width: 100%;
+            padding: 20px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+    
+            .tool-container {
+                text-align: center;
+                width: 20%;
+                padding: 20px 0;
+
+                @media (max-width: 1068px) {    
+                    .fa-5x {
+                        font-size: 3em;
+                    }
+
+                    img {
+                        height: 48px;
+                    }
+                }
+
+                @media (max-width: 680px) {    
+                    width: 33.3%;
+                }
+
+                @media (max-width: 400px) {    
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
