@@ -80,6 +80,12 @@
             }
         }
 
+        .project-hover {
+            .project-text {
+                display: block;
+            }
+        }
+
         .qutine {
             @include backgroundPosition('./images/qutine.png');
             
@@ -87,6 +93,11 @@
                 @include hoverBackground('./images/qutine.png');
             }
         }
+
+        .qutine.project-hover {
+            @include hoverBackground('./images/qutine.png');
+        }
+
 
         .popcorn {
             @include backgroundPosition('./images/popcorn.png');
@@ -96,6 +107,11 @@
             }
         }
 
+        .popcorn.project-hover {
+            @include hoverBackground('./images/popcorn.png');
+        }
+
+
         .pokedex {
             @include backgroundPosition('./images/pokedex.png');
 
@@ -103,6 +119,11 @@
                 @include hoverBackground('./images/pokedex.png');
             }
         }
+
+        .pokedex.project-hover {
+            @include hoverBackground('./images/pokedex.png');
+        }
+
 
         .nice-2-meetya {
             @include backgroundPosition('./images/nice-2-meetya.png');
@@ -112,6 +133,11 @@
             }
         }
 
+        .nice-2-meetya.project-hover {
+            @include hoverBackground('./images/nice-2-meetya.png');
+        }
+
+
         .gallery {
             @include backgroundPosition('./images/gallery.png');
 
@@ -120,12 +146,21 @@
             }
         }
 
+        .gallery.project-hover {
+            @include hoverBackground('./images/gallery.png');
+        }
+
+
         .manycars {
             @include backgroundPosition('./images/2manycars.png');
 
             &:hover {
                 @include hoverBackground('./images/2manycars.png');
             }
+        }
+
+        .manycars.project-hover {
+            @include hoverBackground('./images/2manycars.png');
         }
     }
 }

@@ -109,6 +109,9 @@ header .media-big-screens {
   text-align: center;
   width: 20%;
   padding: 20px 0;
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 1s ease-out;
+  transform: translateY(20vh);
 }
 @media (max-width: 1068px) {
   .tools-section .media-big-screens .tools-list .tool-container .fa-5x {
@@ -127,6 +130,10 @@ header .media-big-screens {
   .tools-section .media-big-screens .tools-list .tool-container {
     width: 50%;
   }
+}
+.tools-section .media-big-screens .tools-list-visible .tool-container {
+  opacity: 1 !important;
+  transform: translateY(0);
 }
 
 .info-section {
@@ -241,6 +248,9 @@ header .media-big-screens {
 .third-section .projects .project-link:hover .project-text {
   display: block;
 }
+.third-section .projects .project-hover .project-text {
+  display: block;
+}
 .third-section .projects .qutine {
   animation-name: appear;
   animation-duration: 0.5s;
@@ -249,6 +259,13 @@ header .media-big-screens {
   background-position: center;
 }
 .third-section .projects .qutine:hover {
+  animation-name: hoverBackground;
+  animation-duration: 0.5s;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/qutine.png");
+  background-size: cover;
+  background-position: center;
+}
+.third-section .projects .qutine.project-hover {
   animation-name: hoverBackground;
   animation-duration: 0.5s;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/qutine.png");
@@ -269,6 +286,13 @@ header .media-big-screens {
   background-size: cover;
   background-position: center;
 }
+.third-section .projects .popcorn.project-hover {
+  animation-name: hoverBackground;
+  animation-duration: 0.5s;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/popcorn.png");
+  background-size: cover;
+  background-position: center;
+}
 .third-section .projects .pokedex {
   animation-name: appear;
   animation-duration: 0.5s;
@@ -277,6 +301,13 @@ header .media-big-screens {
   background-position: center;
 }
 .third-section .projects .pokedex:hover {
+  animation-name: hoverBackground;
+  animation-duration: 0.5s;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/pokedex.png");
+  background-size: cover;
+  background-position: center;
+}
+.third-section .projects .pokedex.project-hover {
   animation-name: hoverBackground;
   animation-duration: 0.5s;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/pokedex.png");
@@ -297,6 +328,13 @@ header .media-big-screens {
   background-size: cover;
   background-position: center;
 }
+.third-section .projects .nice-2-meetya.project-hover {
+  animation-name: hoverBackground;
+  animation-duration: 0.5s;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/nice-2-meetya.png");
+  background-size: cover;
+  background-position: center;
+}
 .third-section .projects .gallery {
   animation-name: appear;
   animation-duration: 0.5s;
@@ -311,6 +349,13 @@ header .media-big-screens {
   background-size: cover;
   background-position: center;
 }
+.third-section .projects .gallery.project-hover {
+  animation-name: hoverBackground;
+  animation-duration: 0.5s;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/gallery.png");
+  background-size: cover;
+  background-position: center;
+}
 .third-section .projects .manycars {
   animation-name: appear;
   animation-duration: 0.5s;
@@ -319,6 +364,13 @@ header .media-big-screens {
   background-position: center;
 }
 .third-section .projects .manycars:hover {
+  animation-name: hoverBackground;
+  animation-duration: 0.5s;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/2manycars.png");
+  background-size: cover;
+  background-position: center;
+}
+.third-section .projects .manycars.project-hover {
   animation-name: hoverBackground;
   animation-duration: 0.5s;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/2manycars.png");
