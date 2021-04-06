@@ -7,12 +7,12 @@ window.addEventListener('scroll', () => {
 })
 
 const toolsVisible = container => {
-    if(window.scrollY > 350){
+    if(window.scrollY > 250){
         container.classList.add('tools-list-visible');
         return;
     }
   
-    if(window.scrollY < 350 && container.classList.contains('tools-list-visible')){
+    if(window.scrollY < 250 && container.classList.contains('tools-list-visible')){
         container.classList.remove('tools-list-visible');
         return;
     }
